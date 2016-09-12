@@ -19,9 +19,6 @@ var connector = new builder.ChatConnector({
 var bot = new builder.UniversalBot(connector);
 server.post('/api/messages', connector.listen());
 
-var connector = new builder.ConsoleConnector().listen();
-var bot = new builder.UniversalBot(connector);
-
 //=========================================================
 // Bots Dialogs
 //=========================================================
