@@ -32,13 +32,13 @@ bot.dialog('/', [
         }
     },
     function (session, results) {
-        session.send('Skype bot is happy to welcome you!', session.userData.name);
+        session.send('Hello %s!', session.userData.name);
     }
 ]);
 
 bot.dialog('/profile', [
     function (session) {
-        builder.Prompts.text(session, 'Hi Siggi! How are you today?');
+        builder.Prompts.text(session, 'Hi! What is your name?');
     },
     function (session, results) {
         session.userData.name = results.response;
